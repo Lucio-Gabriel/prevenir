@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medixo — Clínica</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--accent:#E50000}
+    .accent{background-color:var(--accent)}
+    .accent-border{border-color:var(--accent)}
+    .accent-text{color:var(--accent)}
+    .hero-overlay{background:linear-gradient(180deg, rgba(3,7,18,0.55), rgba(3,7,18,0.6));}
+    .outline-accent{box-shadow:0 6px 18px rgba(229,0,0,0.06); border:1px solid rgba(229,0,0,0.08)}
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50 font-sans">
+  <!-- Header -->
+  <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold">M</div>
+        <span class="text-lg font-semibold">Medixo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#services">Serviços</a>
+        <a href="#specialists">Especialistas</a>
+        <a href="#plans">Planos</a>
+        <a href="#news">Notícias</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden md:inline-block px-4 py-2 rounded font-medium text-white" style="background-color:var(--accent)">Agende Agora</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="h-[540px] md:h-[620px] lg:h-[720px] bg-cover bg-center" style="background-image:url('https://via.placeholder.com/1600x900');">
+      <div class="hero-overlay absolute inset-0"></div>
+      <div class="max-w-7xl mx-auto relative z-10 px-6 h-full flex items-center">
+        <div class="w-full lg:w-2/3 text-white">
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Care you can <span class="accent-text">believe</span> in.</h1>
+          <p class="mt-4 text-lg md:text-xl max-w-2xl">Oferecemos atendimento de qualidade com especialistas experientes.</p>
+          <div class="mt-6 flex gap-4">
+            <a href="#services" class="px-5 py-3 rounded-md font-semibold text-white" style="background-color:var(--accent)">Saiba Mais</a>
+            <a href="#contact" class="px-5 py-3 rounded-md bg-white text-gray-900 font-semibold">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold mb-4">Nós somos comprometidos em prover <span class="accent-text">saúde</span></h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Atendimento de excelência, com cuidado humano e tecnologia de ponta.</p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="services" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
+          <h3 class="font-semibold text-xl mb-2">Cardiologia</h3>
+          <p class="text-gray-600">Exames e consultas para saúde do coração.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
+          <h3 class="font-semibold text-xl mb-2">Pneumologia</h3>
+          <p class="text-gray-600">Cuidado completo com a saúde respiratória.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
+          <h3 class="font-semibold text-xl mb-2">Neurologia</h3>
+          <p class="text-gray-600">Tratamento especializado para doenças neurológicas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especialistas -->
+  <section id="specialists" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Conheça nossos <span class="accent-text">Especialistas</span></h2>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold">Dr. Sarah Martin</h3>
+          <p class="text-gray-500 text-sm">Cirurgia Geral</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold">Dr. Kevin Martin</h3>
+          <p class="text-gray-500 text-sm">Cardiologista</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold">Dra. Jessica Williams</h3>
+          <p class="text-gray-500 text-sm">Pediatra</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold">Dr. Robert Wilson</h3>
+          <p class="text-gray-500 text-sm">Neurologista</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section id="plans" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Planos Acessíveis</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-lg shadow-lg outline-accent">
+          <h3 class="font-semibold text-xl mb-4">Básico</h3>
+          <p class="text-3xl font-bold mb-4">$30</p>
+          <p class="text-gray-500 mb-4">Consultas e exames básicos</p>
+          <a href="#" class="block px-4 py-2 rounded text-white font-semibold" style="background-color:var(--accent)">Assinar</a>
+        </div>
+        <div class="p-6 rounded-lg shadow-lg outline-accent">
+          <h3 class="font-semibold text-xl mb-4">Padrão</h3>
+          <p class="text-3xl font-bold mb-4">$50</p>
+          <p class="text-gray-500 mb-4">Consultas ilimitadas</p>
+          <a href="#" class="block px-4 py-2 rounded text-white font-semibold" style="background-color:var(--accent)">Assinar</a>
+        </div>
+        <div class="p-6 rounded-lg shadow-lg outline-accent">
+          <h3 class="font-semibold text-xl mb-4">Premium</h3>
+          <p class="text-3xl font-bold mb-4">$80</p>
+          <p class="text-gray-500 mb-4">Cobertura total com internação</p>
+          <a href="#" class="block px-4 py-2 rounded text-white font-semibold" style="background-color:var(--accent)">Assinar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notícias -->
+  <section id="news" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Notícias & Artigos</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow p-6">
+          <img src="https://via.placeholder.com/400x250" class="rounded mb-4" />
+          <h3 class="font-semibold mb-2">Especialistas dedicados ao seu bem-estar</h3>
+          <p class="text-gray-500 text-sm">Leia mais sobre nossa equipe médica.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <img src="https://via.placeholder.com/400x250" class="rounded mb-4" />
+          <h3 class="font-semibold mb-2">Novos avanços em saúde preventiva</h3>
+          <p class="text-gray-500 text-sm">Descubra como cuidamos de você.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <img src="https://via.placeholder.com/400x250" class="rounded mb-4" />
+          <h3 class="font-semibold mb-2">5 dicas para uma vida saudável</h3>
+          <p class="text-gray-500 text-sm">Pequenas mudanças, grandes resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10 mt-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Medixo</h3>
+        <p class="text-gray-400 text-sm">Clínica de excelência em saúde.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Links</h4>
+        <ul class="text-gray-400 text-sm space-y-1">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#plans">Planos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Contato</h4>
+        <p class="text-gray-400 text-sm">Email: contato@medixo.com</p>
+        <p class="text-gray-400 text-sm">Tel: (11) 1234-5678</p>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-gray-500 text-xs">© 2025 Medixo. Todos os direitos reservados.</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medixo — Clínica</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --accent: #E50000
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .accent {
+            background-color: var(--accent)
+        }
+
+        .accent-border {
+            border-color: var(--accent)
+        }
+
+
+        .accent-text {
+            color: var(--accent)
+        }
+
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(3, 7, 18, 0.55), rgba(3, 7, 18, 0.6));
+        }
+
+        .outline-accent {
+            box-shadow: 0 6px 18px rgba(229, 0, 0, 0.06);
+            border: 1px solid rgba(229, 0, 0, 0.08)
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-gray-50">
+    <!-- HEADER -->
+<div class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-4 bg-blue-400 px-4 py-2 rounded">
+                <a href="#contact" class="md:inline-block font-medium text-white">
+                    Medixo
+                </a>
+            </div>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center justify-center gap-10 ml-32">
+                <div class="flex">
+                    <i class="fa-solid fa-phone fa-2x mt-3 mr-5 text-blue-500"></i>
+                    <p>
+                        CALL <br>
+                        <span class="text-[#052A52] font-semibold">666 888 0000</span>
+                    </p>
+                </div>
+
+                <div class="hidden lg:block h-10 w-px bg-gray-500/30"></div>
+
+                <div class="flex">
+                    <i class="fa-solid fa-envelope fa-2x mt-2 mr-5 text-blue-500"></i>
+                    <p>
+                        EMAIL <br>
+                        <span class="text-[#052A52] font-semibold">needhelp@info.com</span>
+                    </p>
+                </div>
+
+                <div class="hidden lg:block h-10 w-px bg-gray-500/30"></div>
+
+                <div class="flex">
+                    <i class="bi bi-geo-alt-fill fa-2x mt-2 mr-5 text-blue-500"></i>
+                    <p>
+                        ADDRESS <br>
+                        <span class="text-[#052A52] font-semibold">660 Broklyn Street USA</span>
+                    </p>
+                </div>
+            </nav>
+
+            <!-- Botão Hamburguer (só mobile/tablet, alinhado à direita) -->
+            <div class="flex items-end justify-end">
+                <button id="menu-btn" class="md:hidden text-blue-500 text-3xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL MENU MOBILE -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 bg-[#052A52] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="flex items-center justify-between mb-6">
+            <img src="src/images/topo_logo_azul.svg" alt="Medixo" class="w-32">
+            <button id="close-btn" class="text-2xl">&times;</button>
+        </div>
+
+        <nav class="space-y-4">
+            <a href="#" class="block">HOME</a>
+            <a href="#" class="block">HOME HEALTHCARE</a>
+            <a href="#" class="block">HOME DENTAL</a>
+            <a href="#" class="block">HOME COSMETIC SURGERY</a>
+            <a href="#" class="block">HOME PREGNANCY CARE</a>
+            <hr class="border-gray-600">
+            <a href="#" class="block">PAGES</a>
+            <a href="#" class="block">NEWS</a>
+            <a href="#" class="block">SERVICES</a>
+            <a href="#" class="block">SHOP</a>
+            <a href="#" class="block">CONTACT</a>
+        </nav>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeBtn = document.getElementById("close-btn");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("translate-x-full");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+        });
+    </script>
+    
+    <header id="main-header" class="w-full shadow-sm sticky top-0 lg:z-50 transition-colors duration-300">
+        <div class="w-full bg-[#2490E3] transition-colors duration-300" id="header-bg">
+            <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+                <nav class="hidden md:flex items-center justify-center gap-16 text-white transition-colors duration-300" id="nav-links">
+                    <a href="#">HOME <i class="bi bi-caret-down-fill ml-1"></i></a>
+                    <a href="#about">PAGES <i class="bi bi-caret-down-fill ml-1"></i></a>
+                    <a href="#services">NEWS <i class="bi bi-caret-down-fill ml-1"></i></a>
+                    <a href="#specialists">SERVICES <i class="bi bi-caret-down-fill ml-1"></i></a>
+                    <a href="#plans">SHOP <i class="bi bi-caret-down-fill ml-1"></i></a>
+                    <a href="#news">CONTATC</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="#contact" id="cta-btn"
+                    class="hidden md:inline-block bg-[#092A49] px-10 py-4 font-medium text-white hover:bg-white hover:text-[#092A49] duration-300">
+                        Agende Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const headerBg = document.getElementById("header-bg");
+        const navLinks = document.getElementById("nav-links");
+        const ctaBtn = document.getElementById("cta-btn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                // Header branco
+                headerBg.classList.remove("bg-[#2490E3]");
+                headerBg.classList.add("bg-white");
+
+                navLinks.classList.remove("text-white");
+                navLinks.classList.add("text-[#092A49]");
+
+                ctaBtn.classList.remove("bg-[#092A49]", "text-white");
+                ctaBtn.classList.add("bg-[#2490E3]", "text-white");
+            } else {
+                // Header azul original
+                headerBg.classList.add("bg-[#2490E3]");
+                headerBg.classList.remove("bg-white");
+
+                navLinks.classList.add("text-white");
+                navLinks.classList.remove("text-[#092A49]");
+
+                ctaBtn.classList.add("bg-[#092A49]", "text-white");
+                ctaBtn.classList.remove("bg-[#2490E3]");
+            }
+        });
+    </script>
+
+    <!-- Hero -->
+    <section class="relative">
+        <div class="h-[540px] md:h-[620px] lg:h-[720px] bg-cover bg-center">
+            <div class="hero-overlay absolute inset-0"></div>
+            <div class="max-w-7xl mx-auto relative z-10 px-6 h-full flex items-center">
+                <div class="w-full lg:w-2/3 text-white">
+                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Care you can <span
+                            class="accent-text">believe</span> in.</h1>
+                    <p class="mt-4 text-lg md:text-xl max-w-2xl">Oferecemos atendimento de qualidade com especialistas
+                        experientes.</p>
+                    <div class="mt-6 flex gap-4">
+                        <a href="#services" class="px-5 py-3 rounded-md font-semibold text-white"
+                            >Saiba Mais</a>
+                        <a href="#contact" class="px-5 py-3 rounded-md bg-white text-gray-900 font-semibold">Agendar
+                            Consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-4">Nós somos comprometidos em prover <span class="accent-text">saúde</span>
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Atendimento de excelência, com cuidado humano e tecnologia de
+                ponta.</p>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="services" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
+                    <h3 class="font-semibold text-xl mb-2">Cardiologia</h3>
+                    <p class="text-gray-600">Exames e consultas para saúde do coração.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
+                    <h3 class="font-semibold text-xl mb-2">Pneumologia</h3>
+                    <p class="text-gray-600">Cuidado completo com a saúde respiratória.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
+                    <h3 class="font-semibold text-xl mb-2">Neurologia</h3>
+                    <p class="text-gray-600">Tratamento especializado para doenças neurológicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialistas -->
+    <section id="specialists" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Conheça nossos <span
+                    class="accent-text">Especialistas</span></h2>
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
+                    <h3 class="font-semibold">Dr. Sarah Martin</h3>
+                    <p class="text-gray-500 text-sm">Cirurgia Geral</p>
+                </div>
+                <div>
+                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
+                    <h3 class="font-semibold">Dr. Kevin Martin</h3>
+                    <p class="text-gray-500 text-sm">Cardiologista</p>
+                </div>
+                <div>
+                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
+                    <h3 class="font-semibold">Dra. Jessica Williams</h3>
+                    <p class="text-gray-500 text-sm">Pediatra</p>
+                </div>
+                <div>
+                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
+                    <h3 class="font-semibold">Dr. Robert Wilson</h3>
+                    <p class="text-gray-500 text-sm">Neurologista</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between">
+            <div>
+                <h3 class="text-xl font-semibold mb-2">Medixo</h3>
+                <p class="text-gray-400 text-sm">Clínica de excelência em saúde.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Links</h4>
+                <ul class="text-gray-400 text-sm space-y-1">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Contato</h4>
+                <p class="text-gray-400 text-sm">Email: contato@medixo.com</p>
+                <p class="text-gray-400 text-sm">Tel: (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-500 text-xs">© 2025 Medixo. Todos os direitos reservados.</div>
+    </footer>
+</body>
+
+</html>
