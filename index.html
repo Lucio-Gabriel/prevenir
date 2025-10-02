@@ -13,38 +13,22 @@
 
     <style>
         :root {
-            --accent: #E50000
-            font-family: 'Times New Roman', Times, serif;
+            --accent: #E50000 font-family: 'Times New Roman', Times, serif;
         }
 
-        .accent {
-            background-color: var(--accent)
-        }
-
-        .accent-border {
-            border-color: var(--accent)
-        }
-
-
-        .accent-text {
-            color: var(--accent)
-        }
-
-        .hero-overlay {
-            background: linear-gradient(180deg, rgba(3, 7, 18, 0.55), rgba(3, 7, 18, 0.6));
-        }
-
-        .outline-accent {
-            box-shadow: 0 6px 18px rgba(229, 0, 0, 0.06);
-            border: 1px solid rgba(229, 0, 0, 0.08)
+        .hero-overlay-bg {
+            background-image: linear-gradient(rgba(3, 29, 78, 0.7)), url('https://plus.unsplash.com/premium_photo-1681995326134-cdc947934015?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
     </style>
 </head>
 
 <body class="antialiased text-gray-800 bg-gray-50">
     <!-- HEADER -->
-<div class="w-full bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="w-full bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center gap-4 bg-blue-400 px-4 py-2 rounded">
                 <a href="#contact" class="md:inline-block font-medium text-white">
@@ -94,7 +78,8 @@
 
 
     <!-- MODAL MENU MOBILE -->
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 bg-[#052A52] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div id="mobile-menu"
+        class="fixed inset-y-0 right-0 bg-[#052A52] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
         <div class="flex items-center justify-between mb-6">
             <img src="src/images/topo_logo_azul.svg" alt="Medixo" class="w-32">
             <button id="close-btn" class="text-2xl">&times;</button>
@@ -128,11 +113,12 @@
             mobileMenu.classList.add("translate-x-full");
         });
     </script>
-    
+
     <header id="main-header" class="w-full shadow-sm sticky top-0 lg:z-50 transition-colors duration-300">
         <div class="w-full bg-[#2490E3] transition-colors duration-300" id="header-bg">
             <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-                <nav class="hidden md:flex items-center justify-center gap-16 text-white transition-colors duration-300" id="nav-links">
+                <nav class="hidden md:flex items-center justify-center gap-16 text-white transition-colors duration-300"
+                    id="nav-links">
                     <a href="#">HOME <i class="bi bi-caret-down-fill ml-1"></i></a>
                     <a href="#about">PAGES <i class="bi bi-caret-down-fill ml-1"></i></a>
                     <a href="#services">NEWS <i class="bi bi-caret-down-fill ml-1"></i></a>
@@ -142,7 +128,7 @@
                 </nav>
                 <div class="flex items-center gap-4">
                     <a href="#contact" id="cta-btn"
-                    class="hidden md:inline-block bg-[#092A49] px-10 py-4 font-medium text-white hover:bg-white hover:text-[#092A49] duration-300">
+                        class="hidden md:inline-block bg-[#092A49] px-10 py-4 font-medium text-white hover:bg-white hover:text-[#092A49] duration-300">
                         Agende Agora
                     </a>
                 </div>
@@ -182,24 +168,86 @@
 
     <!-- Hero -->
     <section class="relative">
-        <div class="h-[540px] md:h-[620px] lg:h-[720px] bg-cover bg-center">
-            <div class="hero-overlay absolute inset-0"></div>
-            <div class="max-w-7xl mx-auto relative z-10 px-6 h-full flex items-center">
-                <div class="w-full lg:w-2/3 text-white">
-                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Care you can <span
-                            class="accent-text">believe</span> in.</h1>
-                    <p class="mt-4 text-lg md:text-xl max-w-2xl">Oferecemos atendimento de qualidade com especialistas
-                        experientes.</p>
-                    <div class="mt-6 flex gap-4">
-                        <a href="#services" class="px-5 py-3 rounded-md font-semibold text-white"
-                            >Saiba Mais</a>
-                        <a href="#contact" class="px-5 py-3 rounded-md bg-white text-gray-900 font-semibold">Agendar
-                            Consulta</a>
+        <div class="h-[540px] md:h-[620px] lg:h-[673px] bg-cover bg-center">
+            <div class="hero-overlay absolute inset-0 hero-overlay-bg"></div>
+            <div
+                class="max-w-7xl mx-auto relative z-10 px-6 h-full flex flex-col lg:flex-row items-center lg:items-center justify-between">
+                <div class="w-full lg:w-2/3 text-white text-center lg:text-left mt-12 lg:mt-0">
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight">
+                        Care you can <br>
+                        <span class="accent-text">believe</span> in.
+                    </h1>
+                    <p class="mt-4 text-base sm:text-lg md:text-xl max-w-full lg:max-w-3xl mx-auto lg:mx-0">
+                        Lorem ipsum dolor sit amet, consectuerter adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt.
+                    </p>
+                    <div class="mt-6 flex justify-center lg:justify-start gap-4">
+                        <a href="#contact" id="cta-btn"
+                            class="md:inline-block bg-[#2490E3] px-8 md:px-10 py-4 md:py-6 font-medium text-white hover:bg-white hover:text-[#092A49] transition-colors duration-300">
+                            Learn More
+                        </a>
                     </div>
+                </div>
+
+                <div class="w-64 lg:flex lg:w-1/2 justify-end lg:mt-48">
+                    <img src="src/images/medicos.png" alt="Equipe de médicos sorrindo"
+                        class="h-auto max-w-full object-contain relative z-20">
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div class="relative bg-blue-500 text-white overflow-hidden shadow-lg">
+                <!-- Número e ícone -->
+                <div
+                    class="absolute left-0 top-0 h-full w-20 bg-gradient-to-b from-blue-400 to-white flex flex-col items-center justify-center">
+                    <i class="bi bi-calendar-week text-4xl mb-24"></i>
+                    <span class="font-bold text-xl text-black">01</span>
+                </div>
+
+                <!-- Conteúdo do card -->
+                <div class="ml-20 p-6">
+                    <h3 class="text-xl font-semibold mb-3">Doctors Timetable</h3>
+                    <p class="mb-4 text-sm">
+                        Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour,
+                        or randomised words.
+                    </p>
+                    <div class="mt-24">
+                        <a href="#" class="underline text-white hover:text-gray-200 font-semibold duration-300">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative bg-blue-500 text-white overflow-hidden shadow-lg">
+                <!-- Número e ícone -->
+                <div
+                    class="absolute left-0 top-0 h-full w-20 bg-gradient-to-b from-blue-400 to-white flex flex-col items-center justify-center">
+                    <i class="bi bi-clock-history text-4xl mb-24"></i>
+                    <span class="font-bold text-xl text-black">02</span>
+                </div>
+
+                <!-- Conteúdo do card -->
+                <div class="ml-20 p-6">
+                    <h3 class="text-xl font-semibold mb-3">Opening Hours</h3>
+                    <ul class="text-sm space-y-2">
+                        <li class="flex justify-between border-b border-white/20 pb-2"><span>Monday -
+                                Friday</span><span>8.00 - 7:00 pm</span></li>
+                        <li class="flex justify-between border-b border-white/20 pb-2"><span>Saturday</span><span>9.00 -
+                                8:00 pm</span></li>
+                        <li class="flex justify-between border-b border-white/20 pb-2"><span>Sunday</span><span>10.00 -
+                                9:00 pm</span></li>
+                        <li class="flex justify-between"><span>Emergency</span><span>24HR / 7Days</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Sobre -->
     <section id="about" class="max-w-7xl mx-auto px-6 py-16">
