@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body class="antialiased text-gray-800 bg-gray-50">
+<body class="antialiased text-gray-800 bg-gray-50 font-serif">
     <!-- HEADER -->
     <div class="w-full bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -100,6 +100,7 @@
         </nav>
     </div>
 
+    <!-- MODAL MENU MOBILE -->
     <script>
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -114,6 +115,7 @@
         });
     </script>
 
+    <!--HEADER HOVER BRANCO -->
     <header id="main-header" class="w-full shadow-sm sticky top-0 lg:z-50 transition-colors duration-300">
         <div class="w-full bg-[#2490E3] transition-colors duration-300" id="header-bg">
             <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -136,6 +138,7 @@
         </div>
     </header>
 
+    <!-- SCRIPT HOVER HEADER BRANCO -->
     <script>
         const headerBg = document.getElementById("header-bg");
         const navLinks = document.getElementById("nav-links");
@@ -166,7 +169,7 @@
         });
     </script>
 
-    <!-- Hero -->
+    <!-- HERO BANNER -->
     <section class="relative">
         <div class="h-[540px] md:h-[620px] lg:h-[673px] bg-cover bg-center">
             <div class="hero-overlay absolute inset-0 hero-overlay-bg"></div>
@@ -198,6 +201,7 @@
         </div>
     </section>
 
+    <!-- Card horarios -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
             <!-- Card 1 -->
@@ -217,7 +221,8 @@
                         or randomised words.
                     </p>
                     <div class="mt-24">
-                        <a href="#" class="underline text-white hover:text-gray-200 font-semibold duration-300">View Details</a>
+                        <a href="#" class="underline text-white hover:text-gray-200 font-semibold duration-300">View
+                            Details</a>
                     </div>
                 </div>
             </div>
@@ -248,68 +253,90 @@
         </div>
     </section>
 
+    <!-- SOBRE HOSPITAL -->
+    <section class="py-16 md:py-24 bg-white lg:ml-32">
+        <div class="container mx-auto bg-white px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:space-x-12">
 
-    <!-- Sobre -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold mb-4">Nós somos comprometidos em prover <span class="accent-text">saúde</span>
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Atendimento de excelência, com cuidado humano e tecnologia de
-                ponta.</p>
-        </div>
-    </section>
+                <div class="lg:w-1/2 relative mb-12 lg:mb-0">
+                    <div class="flex items-center">
+                        <div
+                            class="w-8 md:w-14 h-80 bg-gradient-to-b from-blue-500 to-blue-900 text-white flex items-center justify-center self-center">
+                            <p
+                                class="text-xs font-semibold tracking-widest uppercase transform -rotate-90 whitespace-nowrap">
+                                30 YEARS OF EXPERIENCE
+                            </p>
+                        </div>
+                        <div class="relative w-full h-96 sm:h-[500px] overflow-hidden shadow-xl">
+                            <img src="https://media.istockphoto.com/id/1304676089/pt/foto/your-revaccination-is-done-you-are-free-to-go-and-stay-safe.jpg?s=1024x1024&w=is&k=20&c=_IOrNm2iaUE7MotIrHOJveTU1cO6fUNPKahuGSDFXQ0="
+                                alt="Médica examinando paciente" class="w-full h-full object-cover">
+                        </div>
+                    </div>
 
-    <!-- Serviços -->
-    <section id="services" class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
-                    <h3 class="font-semibold text-xl mb-2">Cardiologia</h3>
-                    <p class="text-gray-600">Exames e consultas para saúde do coração.</p>
+                    <div class="h-16 lg:hidden"></div>
                 </div>
-                <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
-                    <h3 class="font-semibold text-xl mb-2">Pneumologia</h3>
-                    <p class="text-gray-600">Cuidado completo com a saúde respiratória.</p>
-                </div>
-                <div class="p-6 rounded-lg shadow hover:shadow-lg transition accent-border border-t-4">
-                    <h3 class="font-semibold text-xl mb-2">Neurologia</h3>
-                    <p class="text-gray-600">Tratamento especializado para doenças neurológicas.</p>
+
+
+                <div class="lg:w-1/2 lg:pt-0">
+                    <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">ABOUT OUR HOSPITAL</p>
+
+                    <div class="w-16 h-0.5 bg-[#2490E3] m-3 ml-0.5"></div>
+
+                    <h2 class="text-4xl sm:text-5xl max-w-md font-extrabold text-[#092A49] leading-tight mb-6">
+                        We Are Committed To Providing Health Care Services
+                    </h2>
+
+                    <p class="text-gray-600 mb-8 max-w-md font-sans">
+                        There are many variations of passages. Lorem ipsum available, but the majority have suffered
+                        alteration in some form. by injected humour, or randomised words.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-6 sm:space-y-0 mb-10">
+
+                        <div>
+                            <div class="flex items-center text-blue-600 mb-2">
+                                <span class="mr-2 text-xl"><i class="bi bi-arrow-right"></i></span>
+                                <p class="font-bold text-xl text-[#092A49]">Professional Doctors</p>
+                            </div>
+                            <p class="text-sm text-gray-500 max-w-xs lg:max-w-[200px] font-sans">
+                                Lorem ipsum dolor is not sit amet consectetur notted.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center text-blue-600 mb-2">
+                                <span class="mr-2 text-xl"><i class="bi bi-arrow-right"></i></span>
+                                <p class="font-bold text-xl text-[#092A49]">Infection Prevention</p>
+                            </div>
+                            <p class="text-sm text-gray-500 max-w-xs lg:max-w-[240px] font-sans">
+                                Lorem ipsum dolor is not sit amet consectetur notted.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-10">
+                        <button
+                            class="bg-[#2490E3] hover:bg-[#092A49] text-white font-semibold py-5 px-9 transition duration-300">
+                            Learn More
+                        </button>
+
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-[#2490E3] shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1659353885824-1199aeeebfc6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Dr Mika Waker" class="w-full h-full object-cover">
+                            </div>
+
+                            <div>
+                                <p class="text-xl font-serif font-bold text-gray-800">Dr Mika Waker</p>
+                                <p class="text-gray-400 italic">Signature Placeholder</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Especialistas -->
-    <section id="specialists" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Conheça nossos <span
-                    class="accent-text">Especialistas</span></h2>
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
-                    <h3 class="font-semibold">Dr. Sarah Martin</h3>
-                    <p class="text-gray-500 text-sm">Cirurgia Geral</p>
-                </div>
-                <div>
-                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
-                    <h3 class="font-semibold">Dr. Kevin Martin</h3>
-                    <p class="text-gray-500 text-sm">Cardiologista</p>
-                </div>
-                <div>
-                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
-                    <h3 class="font-semibold">Dra. Jessica Williams</h3>
-                    <p class="text-gray-500 text-sm">Pediatra</p>
-                </div>
-                <div>
-                    <!-- <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" /> -->
-                    <h3 class="font-semibold">Dr. Robert Wilson</h3>
-                    <p class="text-gray-500 text-sm">Neurologista</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-10 mt-12">
