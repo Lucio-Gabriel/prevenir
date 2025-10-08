@@ -15,6 +15,8 @@
     <style>
         :root {
             --accent: #E50000 font-family: 'Times New Roman', Times, serif;
+            --primary: #E30005;
+            --secondary: #052951;
         }
 
         .hero-overlay-bg {
@@ -26,7 +28,7 @@
     </style>
 </head>
 
-<body class="antialiased text-gray-800 bg-gray-50 font-serif">
+<body class="antialiased text-gray-800 font-serif">
     <!-- HEADER -->
     <div class="w-full bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -78,7 +80,7 @@
 
     <!-- MODAL MENU MOBILE -->
     <div id="mobile-menu"
-        class="fixed inset-y-0 right-0 bg-[#052A52] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        class="fixed inset-y-0 right-0 bg-[var(--secondary)] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
         <div class="flex items-center justify-between mb-6">
             <img src="src/images/topo_logo_azul.svg" alt="Medixo" class="w-32">
             <button id="close-btn" class="text-2xl">&times;</button>
@@ -101,20 +103,81 @@
 
     <!--HEADER HOVER BRANCO -->
     <header id="main-header" class="w-full shadow-sm sticky top-0 lg:z-50 transition-colors duration-300">
-        <div class="w-full bg-[#2490E3] transition-colors duration-300" id="header-bg">
+        <div class="w-full bg-[var(--primary)] transition-colors duration-300" id="header-bg">
             <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-                <nav class="hidden md:flex items-center justify-center gap-16 text-white transition-colors duration-300"
-                    id="nav-links">
-                    <a href="#">HOME <i class="bi bi-caret-down-fill ml-1"></i></a>
-                    <a href="#about">PAGES <i class="bi bi-caret-down-fill ml-1"></i></a>
-                    <a href="#services">NEWS <i class="bi bi-caret-down-fill ml-1"></i></a>
-                    <a href="#specialists">SERVICES <i class="bi bi-caret-down-fill ml-1"></i></a>
-                    <a href="#plans">SHOP <i class="bi bi-caret-down-fill ml-1"></i></a>
-                    <a href="#news">CONTATC</a>
+                <nav class="hidden md:flex items-center justify-center gap-16 text-white transition-colors duration-300" id="nav-links">
+
+                    <div class="relative group">
+                        <a href="#" class="flex items-center cursor-pointer">
+                            HOME <i class="bi bi-caret-down-fill ml-1"></i>
+                        </a>
+                        <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
+                                opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
+                                transition-all duration-300">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Page 1</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Page 2</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Home Page 3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative group">
+                        <a href="#about" class="flex items-center cursor-pointer">
+                            PAGES <i class="bi bi-caret-down-fill ml-1"></i>
+                        </a>
+                        <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
+                                opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
+                                transition-all duration-300">
+                            <li><a href="#about" class="block px-4 py-2 hover:bg-gray-100">Sobre Nós</a></li>
+                            <li><a href="#specialists" class="block px-4 py-2 hover:bg-gray-100">Especialistas</a></li>
+                            <li><a href="#plans" class="block px-4 py-2 hover:bg-gray-100">Planos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative group">
+                        <a href="#about" class="flex items-center cursor-pointer">
+                            NEWS <i class="bi bi-caret-down-fill ml-1"></i>
+                        </a>
+                        <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
+                                opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
+                                transition-all duration-300">
+                            <li><a href="#about" class="block px-4 py-2 hover:bg-gray-100">Sobre Nós</a></li>
+                            <li><a href="#specialists" class="block px-4 py-2 hover:bg-gray-100">Especialistas</a></li>
+                            <li><a href="#plans" class="block px-4 py-2 hover:bg-gray-100">Planos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative group">
+                        <a href="#about" class="flex items-center cursor-pointer">
+                            SERVICES <i class="bi bi-caret-down-fill ml-1"></i>
+                        </a>
+                        <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
+                                opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
+                                transition-all duration-300">
+                            <li><a href="#about" class="block px-4 py-2 hover:bg-gray-100">Sobre Nós</a></li>
+                            <li><a href="#specialists" class="block px-4 py-2 hover:bg-gray-100">Especialistas</a></li>
+                            <li><a href="#plans" class="block px-4 py-2 hover:bg-gray-100">Planos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative group">
+                        <a href="#about" class="flex items-center cursor-pointer">
+                            SHOP <i class="bi bi-caret-down-fill ml-1"></i>
+                        </a>
+                        <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
+                                opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
+                                transition-all duration-300">
+                            <li><a href="#about" class="block px-4 py-2 hover:bg-gray-100">Sobre Nós</a></li>
+                            <li><a href="#specialists" class="block px-4 py-2 hover:bg-gray-100">Especialistas</a></li>
+                            <li><a href="#plans" class="block px-4 py-2 hover:bg-gray-100">Planos</a></li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#news" class="cursor-pointer">CONTACT</a>
                 </nav>
+
                 <div class="flex items-center gap-4">
                     <a href="#contact" id="cta-btn"
-                        class="hidden md:inline-block bg-[#092A49] px-10 py-4 font-medium text-white hover:bg-white hover:text-[#092A49] duration-300">
+                    class="hidden md:inline-block bg-[var(--secondary)] px-10 py-4 font-medium text-white hover:bg-white hover:text-[#092A49] duration-300">
                         Agende Agora
                     </a>
                 </div>
@@ -158,7 +221,7 @@
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
             <!-- Card 1 -->
-            <div class="relative bg-blue-500 text-white overflow-hidden shadow-lg">
+            <div class="relative bg-[var(--primary)] text-white overflow-hidden shadow-lg">
                 <div
                     class="absolute left-0 top-0 h-full w-20 bg-gradient-to-b from-blue-400 to-white flex flex-col items-center justify-center">
                     <i class="bi bi-calendar-week text-4xl mb-24"></i>
@@ -179,7 +242,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="relative bg-blue-500 text-white overflow-hidden shadow-lg">
+            <div class="relative bg-[var(--primary)] text-white overflow-hidden shadow-lg">
                 <div
                     class="absolute left-0 top-0 h-full w-20 bg-gradient-to-b from-blue-400 to-white flex flex-col items-center justify-center">
                     <i class="bi bi-clock-history text-4xl mb-24"></i>
@@ -229,7 +292,7 @@
                 <div class="lg:w-1/2 lg:pt-0">
                     <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">ABOUT OUR HOSPITAL</p>
 
-                    <div class="w-16 h-0.5 bg-[#2490E3] m-3 ml-0.5"></div>
+                    <div class="w-16 h-0.5 bg-[var(--primary)] m-3 ml-0.5"></div>
 
                     <h2 class="text-4xl sm:text-5xl max-w-md font-extrabold text-[#092A49] leading-tight mb-6">
                         We Are Committed To Providing Health Care Services
@@ -244,7 +307,7 @@
 
                         <div>
                             <div class="flex items-center text-blue-600 mb-2">
-                                <span class="mr-2 text-xl"><i class="bi bi-arrow-right"></i></span>
+                                <span class="mr-2 text-xl"><i class="bi bi-arrow-right text-[var(--primary)]"></i></span>
                                 <p class="font-bold text-xl text-[#092A49]">Professional Doctors</p>
                             </div>
                             <p class="text-sm text-gray-500 max-w-xs lg:max-w-[200px] font-sans">
@@ -254,7 +317,7 @@
 
                         <div>
                             <div class="flex items-center text-blue-600 mb-2">
-                                <span class="mr-2 text-xl"><i class="bi bi-arrow-right"></i></span>
+                                <span class="mr-2 text-xl"><i class="bi bi-arrow-right text-[var(--primary)]"></i></span>
                                 <p class="font-bold text-xl text-[#092A49]">Infection Prevention</p>
                             </div>
                             <p class="text-sm text-gray-500 max-w-xs lg:max-w-[240px] font-sans">
@@ -265,13 +328,13 @@
 
                     <div class="flex items-center gap-10">
                         <button
-                            class="bg-[#2490E3] hover:bg-[#092A49] text-white font-semibold py-5 px-9 transition duration-300">
+                            class="bg-[var(--primary)] hover:bg-[var(--secondary)] text-white font-semibold py-5 px-9 transition duration-300">
                             Learn More
                         </button>
 
                         <div class="flex items-center space-x-4">
                             <div
-                                class="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-[#2490E3] shadow-lg">
+                                class="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--primary)] shadow-lg">
                                 <img src="https://images.unsplash.com/photo-1659353885824-1199aeeebfc6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="Dr Mika Waker" class="w-full h-full object-cover">
                             </div>
@@ -282,6 +345,24 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-cyan-100/30">
+        <div class="container mx-auto px-4 ml-14 sm:px-6 lg:px-8 lg:ml-80">
+            <div class="flex flex-col lg:flex-row justify-center lg:space-x-12">
+                <div class="lg:w-1/2 lg:pt-0">
+                    <div class="ml-20 lg:ml-32">
+                        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">ABOUT OUR HOSPITAL</p>
+
+                        <div class="w-44 h-0.5 bg-[var(--primary)] m-3 ml-0.5"></div>
+                    </div>
+
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-[#092A49] leading-tight mb-6">
+                        Facilities We Provided
+                    </h2>
                 </div>
             </div>
         </div>

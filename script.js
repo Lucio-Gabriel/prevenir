@@ -39,3 +39,4 @@ window.addEventListener("scroll", () => {
         ctaBtn.classList.remove("bg-[#2490E3]");
     }
 });
+
