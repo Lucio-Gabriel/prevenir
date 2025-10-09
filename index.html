@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="script.js">
 
     <style>
@@ -189,10 +191,13 @@
             <div
                 class="max-w-7xl mx-auto relative z-10 px-6 h-full flex flex-col lg:flex-row items-center lg:items-center justify-between">
                 <div class="w-full lg:w-2/3 text-white text-center lg:text-left mt-12 lg:mt-0">
-                    <h1
-                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight">
-                        Prevenir <br>
-                        <span class="accent-text">Saúde Ocupacional</span>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight 
+                               [text-shadow:1px_1px_3px_rgba(0,0,0,0.3)] animate-fade-in-down">
+                        <span
+                            class="bg-gradient-to-r from-[#E30005] to-red-800 bg-clip-text text-transparent">Prevenir</span>
+                        <br>
+                        <span class="bg-gradient-to-r from-[#E30005] to-red-800 bg-clip-text text-transparent">Saúde
+                            Ocupacional</span>
                     </h1>
                     <p class="mt-4 text-base sm:text-lg md:text-xl max-w-full lg:max-w-3xl mx-auto lg:mx-0">
                         Queremos que sua empresa prospere com segurança e saúde.
@@ -200,7 +205,7 @@
                     <div class="mt-6 flex justify-center lg:justify-start gap-4">
                         <a href="#contact" id="cta-btn"
                             class="md:inline-block bg-[#2490E3] px-8 md:px-10 py-4 md:py-6 font-medium text-white hover:bg-white hover:text-[#092A49] transition-colors duration-300">
-                            Learn More
+                            Explorar Serviços
                         </a>
                     </div>
                 </div>
@@ -252,8 +257,8 @@
                             </p>
                         </div>
                         <div class="relative w-full h-96 sm:h-[500px] overflow-hidden shadow-xl">
-                            <img src="src/images/imagem (4).jpeg"
-                                alt="Médica examinando paciente" class="w-full h-full object-cover">
+                            <img src="src/images/imagem (4).jpeg" alt="Médica examinando paciente"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
 
@@ -309,8 +314,8 @@
                         <div class="flex items-center space-x-4">
                             <div
                                 class="flex-shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--primary)] shadow-lg">
-                                <img src="src/images/imagem (2).jpeg"
-                                    alt="Dr Mika Waker" class="w-full h-full object-cover">
+                                <img src="src/images/imagem (2).jpeg" alt="Dr Mika Waker"
+                                    class="w-full h-full object-cover">
                             </div>
 
                             <div>
@@ -329,7 +334,8 @@
             <div class="flex flex-col lg:flex-row justify-center lg:space-x-12">
                 <div class="lg:w-1/2 lg:pt-0">
                     <div class="ml-20 lg:ml-32">
-                        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">SOBRE O CONSULTÓRIO
+                        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">SOBRE O
+                            CONSULTÓRIO
                         </p>
 
                         <div class="w-44 h-0.5 bg-[var(--primary)] m-3 ml-0.5"></div>
@@ -343,10 +349,21 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+            <div
+                class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
                 <div class="flex mb-4">
                     <div class="bg-[var(--primary)] p-4 rounded-2xl shadow-md">
-                        <svg  xmlns="http://www.w3.org/2000/svg" class="text-white" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" /><path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" /><path d="M10 9l4 0" /><path d="M12 7l0 4" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l18 0" />
+                            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                            <path d="M10 9l4 0" />
+                            <path d="M12 7l0 4" />
+                        </svg>
                     </div>
                 </div>
 
@@ -359,14 +376,25 @@
                 </p>
 
                 <a href="#" class="text-[var(--primary)] font-medium hover:underline">
-                    Ler mais 
+                    Ler mais
                 </a>
             </div>
 
-            <div class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+            <div
+                class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
                 <div class="flex mb-4">
                     <div class="bg-[var(--primary)] p-4 rounded-2xl shadow-md">
-                        <svg  xmlns="http://www.w3.org/2000/svg" class="text-white" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" /><path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" /><path d="M10 9l4 0" /><path d="M12 7l0 4" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l18 0" />
+                            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                            <path d="M10 9l4 0" />
+                            <path d="M12 7l0 4" />
+                        </svg>
                     </div>
                 </div>
 
@@ -379,14 +407,25 @@
                 </p>
 
                 <a href="#" class="text-[var(--primary)] font-medium hover:underline">
-                    Ler mais 
+                    Ler mais
                 </a>
             </div>
 
-            <div class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+            <div
+                class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
                 <div class="flex mb-4">
                     <div class="bg-[var(--primary)] p-4 rounded-2xl shadow-md">
-                        <svg  xmlns="http://www.w3.org/2000/svg" class="text-white" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" /><path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" /><path d="M10 9l4 0" /><path d="M12 7l0 4" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l18 0" />
+                            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                            <path d="M10 9l4 0" />
+                            <path d="M12 7l0 4" />
+                        </svg>
                     </div>
                 </div>
 
@@ -399,7 +438,7 @@
                 </p>
 
                 <a href="#" class="text-[var(--primary)] font-medium hover:underline">
-                    Ler mais 
+                    Ler mais
                 </a>
             </div>
         </div>
@@ -410,7 +449,8 @@
             <div class="flex flex-col lg:flex-row justify-center lg:space-x-12">
                 <div class="lg:w-1/2 lg:pt-0">
                     <div class="ml-20 lg:ml-32">
-                        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">SOBRE O CONSULTÓRIO
+                        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">SOBRE O
+                            CONSULTÓRIO
                         </p>
 
                         <div class="w-44 h-0.5 bg-[var(--primary)] m-3 ml-0.5"></div>
@@ -443,7 +483,8 @@
                 <div class="p-6 text-center relative">
                     <h3 class="text-xl font-semibold text-[#0b3d91]">Sistema Informatizado</h3>
                     <p class="text-gray-600 mt-2 text-sm leading-relaxed">
-                        A Prevenir usa um sistema digital que torna os atendimentos mais ágeis e mantém as informações seguras em formato eletrônico.
+                        A Prevenir usa um sistema digital que torna os atendimentos mais ágeis e mantém as informações
+                        seguras em formato eletrônico.
                     </p>
                 </div>
             </div>
@@ -454,7 +495,8 @@
                 <div class="p-6 text-center relative">
                     <h3 class="text-xl font-semibold text-[#0b3d91]">Atendimento Personalizado</h3>
                     <p class="text-gray-600 mt-2 text-sm leading-relaxed">
-                        A Prevenir oferece um serviço rápido e eficiente, focado em melhorar a qualidade de vida e o bem-estar dos colaboradores.
+                        A Prevenir oferece um serviço rápido e eficiente, focado em melhorar a qualidade de vida e o
+                        bem-estar dos colaboradores.
                     </p>
                 </div>
             </div>
