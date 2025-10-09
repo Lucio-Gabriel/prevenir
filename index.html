@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="script.js">
 
     <style>
         :root {
-            --accent: #E50000 font-family: 'Times New Roman', Times, serif;
             --primary: #E30005;
             --secondary: #052951;
         }
@@ -28,7 +30,7 @@
     </style>
 </head>
 
-<body class="antialiased text-gray-800 font-serif">
+<body class="antialiased text-gray-800" style="font-family: 'Lato', sans-serif;">
     <!-- HEADER -->
     <div class="w-full bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -68,7 +70,7 @@
             </nav>
 
             <div class="flex items-end justify-end">
-                <button id="menu-btn" class="md:hidden text-blue-500 text-3xl">
+                <button id="menu-btn" class="md:hidden text-[var(--primary)] text-3xl">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -78,24 +80,20 @@
 
     <!-- MODAL MENU MOBILE -->
     <div id="mobile-menu"
-        class="fixed inset-y-0 right-0 bg-[var(--secondary)] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        class="fixed inset-y-0 right-0 bg-[var(--primary)] text-white w-72 h-full p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50">
         <div class="flex items-center justify-between mb-6">
-            <img src="src/images/topo_logo_azul.svg" alt="Medixo" class="w-32">
+            <img src="src/images/logo prevenir-01.jpg" alt="Medixo" class="w-32">
             <button id="close-btn" class="text-2xl">&times;</button>
         </div>
 
         <nav class="space-y-4">
             <a href="#" class="block">HOME</a>
-            <a href="#" class="block">HOME HEALTHCARE</a>
-            <a href="#" class="block">HOME DENTAL</a>
-            <a href="#" class="block">HOME COSMETIC SURGERY</a>
-            <a href="#" class="block">HOME PREGNANCY CARE</a>
-            <hr class="border-gray-600">
-            <a href="#" class="block">PAGES</a>
-            <a href="#" class="block">NEWS</a>
-            <a href="#" class="block">SERVICES</a>
-            <a href="#" class="block">SHOP</a>
-            <a href="#" class="block">CONTACT</a>
+            <a href="#" class="block">CLÍNICA</a>
+            <a href="#" class="block">SERVIÇOS</a>
+            <a href="#" class="block">CLIENTE</a>
+            <a href="#" class="block">LINKS</a>
+            <a href="#" class="block">CONTATOS</a>
+            <hr class="border-white">
         </nav>
     </div>
 
@@ -121,7 +119,7 @@
 
                     <div class="relative group">
                         <a href="#about" class="flex items-center cursor-pointer">
-                            PAGES <i class="bi bi-caret-down-fill ml-1"></i>
+                            CLÍNICA <i class="bi bi-caret-down-fill ml-1"></i>
                         </a>
                         <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
                                 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
@@ -134,7 +132,7 @@
 
                     <div class="relative group">
                         <a href="#about" class="flex items-center cursor-pointer">
-                            NEWS <i class="bi bi-caret-down-fill ml-1"></i>
+                            SERVIÇOS <i class="bi bi-caret-down-fill ml-1"></i>
                         </a>
                         <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
                                 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
@@ -147,7 +145,7 @@
 
                     <div class="relative group">
                         <a href="#about" class="flex items-center cursor-pointer">
-                            SERVICES <i class="bi bi-caret-down-fill ml-1"></i>
+                            CLIENTE <i class="bi bi-caret-down-fill ml-1"></i>
                         </a>
                         <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
                                 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
@@ -160,7 +158,7 @@
 
                     <div class="relative group">
                         <a href="#about" class="flex items-center cursor-pointer">
-                            SHOP <i class="bi bi-caret-down-fill ml-1"></i>
+                            LINKS <i class="bi bi-caret-down-fill ml-1"></i>
                         </a>
                         <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 z-10 
                                 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
@@ -171,12 +169,12 @@
                         </ul>
                     </div>
 
-                    <a href="#news" class="cursor-pointer">CONTACT</a>
+                    <a href="#news" class="cursor-pointer">CONTATOS</a>
                 </nav>
 
                 <div class="flex items-center gap-4">
                     <a href="#contact" id="cta-btn"
-                        class="hidden md:inline-block bg-[var(--secondary)] px-10 py-4 font-medium text-white hover:bg-white hover:text-[#092A49] duration-300">
+                        class="hidden md:inline-block bg-white px-10 py-4 font-semibold text-[var(--primary)] hover:bg-gray-500 hover:text-white duration-300">
                         Agende Agora
                     </a>
                 </div>
@@ -193,12 +191,11 @@
                 <div class="w-full lg:w-2/3 text-white text-center lg:text-left mt-12 lg:mt-0">
                     <h1
                         class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight">
-                        Care you can <br>
-                        <span class="accent-text">believe</span> in.
+                        Prevenir <br>
+                        <span class="accent-text">Saúde Ocupacional</span>
                     </h1>
                     <p class="mt-4 text-base sm:text-lg md:text-xl max-w-full lg:max-w-3xl mx-auto lg:mx-0">
-                        Lorem ipsum dolor sit amet, consectuerter adipiscing elit, sed diam nonummy nibh euismod
-                        tincidunt.
+                        Queremos que sua empresa prospere com segurança e saúde.
                     </p>
                     <div class="mt-6 flex justify-center lg:justify-start gap-4">
                         <a href="#contact" id="cta-btn"
