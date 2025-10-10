@@ -16,10 +16,13 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="script.js">
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
         :root {
-            --primary: #E30005;
+            --primary: #2490E3;
+            --primary-red: #E30005;
             --secondary: #052951;
         }
 
@@ -185,41 +188,36 @@
     </header>
 
     <!-- HERO BANNER -->
-    <section class="relative">
-        <div class="h-[540px] md:h-[620px] lg:h-[673px] bg-cover bg-center">
-            <div class="hero-overlay absolute inset-0 hero-overlay-bg"></div>
-            <div
-                class="max-w-7xl mx-auto relative z-10 px-6 h-full flex flex-col lg:flex-row items-center lg:items-center justify-between">
-                <div class="w-full lg:w-2/3 text-white text-center lg:text-left mt-12 lg:mt-0">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight 
-                               [text-shadow:1px_1px_3px_rgba(0,0,0,0.3)] animate-fade-in-down">
-                        <span
-                            class="bg-gradient-to-r from-[#E30005] to-red-800 bg-clip-text text-transparent">Prevenir</span>
-                        <br>
-                        <span class="bg-gradient-to-r from-[#E30005] to-red-800 bg-clip-text text-transparent">Saúde
-                            Ocupacional</span>
-                    </h1>
-                    <p class="mt-4 text-base sm:text-lg md:text-xl max-w-full lg:max-w-3xl mx-auto lg:mx-0">
-                        Queremos que sua empresa prospere com segurança e saúde.
-                    </p>
-                    <div class="mt-6 flex justify-center lg:justify-start gap-4">
-                        <a href="#contact" id="cta-btn"
-                            class="md:inline-block bg-[#2490E3] px-8 md:px-10 py-4 md:py-6 font-medium text-white hover:bg-white hover:text-[#092A49] transition-colors duration-300">
-                            Explorar Serviços
-                        </a>
-                    </div>
-                </div>
+    <section class="w-full py-16 px-6 flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between gap-10 max-w-7xl mx-auto my-10">
+        <div class="flex-1 space-y-6 text-center lg:text-left">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-[#092A49]">
+                <span class="text-[var(--primary)]">Clínica Prevenir</span><br class="hidden sm:block" />
+                Saúde Ocupacional
+            </h1>
 
-                <div class="w-64 lg:flex lg:w-1/2 justify-end lg:mt-48">
-                    <img src="src/images/medicos.png" alt="Equipe de médicos sorrindo"
-                        class="h-auto max-w-full object-contain relative z-20">
-                </div>
+            <p class="text-gray-600 max-w-md mx-auto lg:mx-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#services"
+                    class="bg-[var(--primary)] text-white px-6 py-3 font-medium hover:bg-red-600 duration-300">
+                    Explorar Serviços
+                </a>
             </div>
+        </div>
+
+        <div class="flex-1 flex justify-center lg:justify-end lg:mr-20 relative">
+            <div
+                class="absolute -z-10 w-64 h-64 bg-[var(--primary)] rounded-full top-8 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-0">
+            </div>
+            <img src="src/images/medicos.png" alt="Doctor" class="relative  w-[400px] h-auto" />
         </div>
     </section>
 
-    <!-- Card horarios -->
-    <section id="stats-section" class="max-w-6xl mx-auto my-10">
+    <!-- Card Dados -->
+    <section id="stats-section" class="max-w-6xl mx-auto my-10 lg:my-0 lg:-mt-32 lg:ml-[340px] relative z-10">
         <div
             class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-300 rounded-xl shadow-lg overflow-hidden text-center bg-white">
             <div class="p-6">
@@ -349,97 +347,1037 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-                class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex mb-4">
-                    <div class="bg-[var(--primary)] p-4 rounded-2xl shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M3 21l18 0" />
-                            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
-                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
-                            <path d="M10 9l4 0" />
-                            <path d="M12 7l0 4" />
-                        </svg>
+            <!-- Card e Modal Wrapper -->
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
                     </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Medicina do Trabalho</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Medicina do trabalho ou medicina ocupacional é uma especialidade médica que se ocupa da
+                        promoção...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
                 </div>
 
-                <span class="absolute top-10 right-6 text-5xl font-bold text-red-300">01</span>
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
 
-                <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Medicina do Trabalho</h3>
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
 
-                <p class="text-start text-gray-600 mb-4">
-                    Medicina do trabalho ou medicina ocupacional é uma especialidade médica que se ocupa da promoção...
-                </p>
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
 
-                <a href="#" class="text-[var(--primary)] font-medium hover:underline">
-                    Ler mais
-                </a>
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                Medicina do trabalho ou medicina ocupacional é uma especialidade médica que se ocupa da
+                                promoção e
+                                preservação da saúde do trabalhador. O médico do trabalho avalia a capacidade do
+                                candidato a
+                                determinado trabalho e realiza reavaliações periódicas de sua saúde dando ênfase aos
+                                riscos
+                                ocupacionais aos quais este trabalhador fica exposto.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div
-                class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex mb-4">
-                    <div class="bg-[var(--primary)] p-4 rounded-2xl shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M3 21l18 0" />
-                            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
-                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
-                            <path d="M10 9l4 0" />
-                            <path d="M12 7l0 4" />
-                        </svg>
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
                     </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Elaboração do PCMSO</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        O Programa de Controle Médico de Saúde Ocupacional tem como objetivo a promoção e a preservação
+                        da saúde do conjunto dos trabalhadores...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
                 </div>
 
-                <span class="absolute top-10 right-6 text-5xl font-bold text-red-300">01</span>
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
 
-                <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Medicina do Trabalho</h3>
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
 
-                <p class="text-start text-gray-600 mb-4">
-                    Medicina do trabalho ou medicina ocupacional é uma especialidade médica que se ocupa da promoção...
-                </p>
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
 
-                <a href="#" class="text-[var(--primary)] font-medium hover:underline">
-                    Ler mais
-                </a>
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                O Programa de Controle Médico de Saúde Ocupacional tem como objetivo a promoção e a
+                                preservação da saúde do conjunto dos trabalhadores.
+                                As diretrizes do programa estão estabelecidas na Norma Regulamentadora NR-7, da Portaria
+                                3214/78 do
+                                Ministério do Trabalho e Emprego.
+
+                                <br><br>
+
+                                Por meio do PCMSO se estabelece o controle de saúde físico e mental do trabalhador,
+                                levando em consideração as atividades desenvolvidas, e obriga a
+                                realização de exames médicos admissionais, de mudança de função e de retorno ao
+                                trabalho, estabelecendo ainda a o
+                                brigatoriedade de um exame médico periódico.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div
-                class="max-w-sm bg-white rounded-2xl shadow-md p-8 relative text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg">
-                <div class="flex mb-4">
-                    <div class="bg-[var(--primary)] p-4 rounded-2xl shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M3 21l18 0" />
-                            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
-                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
-                            <path d="M10 9l4 0" />
-                            <path d="M12 7l0 4" />
-                        </svg>
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
                     </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Exames Médicos Ocupacionais</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Exame Admissional - Antes do trabalhador iniciar suas atividades ocupacional. O coordenador deve
+                        ser cientificado da necessidade deste exame...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
                 </div>
 
-                <span class="absolute top-10 right-6 text-5xl font-bold text-red-300">01</span>
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
 
-                <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Medicina do Trabalho</h3>
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
 
-                <p class="text-start text-gray-600 mb-4">
-                    Medicina do trabalho ou medicina ocupacional é uma especialidade médica que se ocupa da promoção...
-                </p>
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
 
-                <a href="#" class="text-[var(--primary)] font-medium hover:underline">
-                    Ler mais
-                </a>
+                        <div class="p-6 max-h-[60vh] overflow-y-auto">
+                            <p class="text-gray-600">
+                                De acordo com a NR 7 serão realizados os seguintes exames médicos ocupacionais:
+
+                                <br><br>
+
+                                Exame Admissional - Antes do trabalhador iniciar suas atividades ocupacional. O
+                                coordenador deve ser cientificado da necessidade deste exame.
+
+                                <br><br>
+
+                                Exame Periódico - De acordo com a NR 7, anualmente para trabalhadores expostos à algum
+                                risco detectado nas avaliações ambientais, menores de 18 e maiores de 45 anos, e
+                                bianualmente para os compreendidos entre esta faixa etária.
+
+                                <br><br>
+
+                                Exame de Troca de Função - Sempre que mudar o risco a que o trabalhador está exposto.
+
+                                <br><br>
+
+                                Exame de Retorno ao Trabalho - Para trabalhadores afastados 30 ou mais dias do trabalho
+                                por doença, acidente do trabalho, doença ocupacional (equivalente ao acidente do
+                                trabalho), parto ou afastamento sem remuneração por serviço militar.
+
+                                <br><br>
+
+                                Exame Demissional - No exame médico demissional, será obrigatoriamente realizada até a
+                                data da homologação, desde que o último exame médico ocupacional tenha sido realizado há
+                                mais de:
+
+                                <br><br>
+
+                                -135 (centro e trinta e cinco) dias para as empresas de grau de risco 1 e 2, segundo o
+                                Quadro I da NR 4;
+
+                                <br><br>
+
+                                -90 (noventa) dias para as empresas de grau de risco 3 e 4, segundo o Quadro I da NR 4.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">ASO - Atestado de Saúde Ocupacional
+                    </h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Para cada exame médico realizado, o médico deverá emitir o Atestado de Saúde Ocupacional ASO, em
+                        2 (duas) vias...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                Para cada exame médico realizado, o médico deverá emitir o Atestado de Saúde Ocupacional
+                                ASO, em 2 (duas) vias
+
+                                <br><br>
+
+                                A primeira via do ASO ficará arquivada no local de trabalho do trabalhador, inclusive
+                                frente de trabalho ou canteiro de obras, à disposição da fiscalização do trabalho;
+
+                                <br><br>
+
+                                A segunda via do ASO será obrigatoriamente entregue ao trabalhador, mediante recibo na
+                                primeira via.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Exames Periódicos</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        A PREVENIR  efetua o CONTROLE DOS EXAMES PERIÓDICOS, sendo que na época do vencimento é emitida uma convocação para o trabalhador...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                A PREVENIR  efetua o CONTROLE DOS EXAMES PERIÓDICOS, sendo que na época do vencimento é emitida uma convocação para o 
+                                trabalhador comparecer à consulta clínica e realização de exames complementares necessários, respeitando os prazos
+                                estabelecidos no PCMSO da empresa.
+
+                                <br><br>
+
+                                Demais exames (Admissional, Demissional, Retorno ao trabalho e Mudança de Função), serão solicitados pelo CLIENTE, quando houver 
+                                alteração do quadro funcional. Eventualmente, por solicitação médica pode ser determinado retorno para orientação do trabalhador.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Exames Complementares</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        São exames (laboratoriais, de imagem, etc.) que complementam aos dados da anamnese e do 
+                        exame físico para a confirmação das hipóteses diagnósticas e tratamento... 
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                São exames (laboratoriais, de imagem, etc.) que complementam aos dados da anamnese e do exame 
+                                físico para a confirmação das hipóteses diagnósticas e tratamento. No caso de Medicina ocupacional 
+                                alguns destes exames são obrigatórios a depender da exposição do trabalhador a agentes físicos, químicos e ou 
+                                biológicos e outros são necessários para um correto diagnóstico antes da emissão do ASO.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Segurança do Trabalho</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Pode ser entendida como os conjuntos de medidas que são adotadas visando minimizar... 
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                Pode ser entendida como os conjuntos de medidas que são adotadas visando minimizar os 
+                                acidentes de trabalho, doenças ocupacionais, bem como proteger a integridade e a capacidade
+                                de trabalho do trabalhador.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Elaboração do PPRA</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        O Programa de Prevenção de Riscos Ambientais é um programa estabelecido pela
+                         Norma Regulamentadora NR-9, da Secretaria de Segurança ... 
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                O Programa de Prevenção de Riscos Ambientais é um programa estabelecido pela 
+                                Norma Regulamentadora NR-9, da Secretaria de Segurança e Saúde do Trabalho, do Ministério do Trabalho.
+                                
+                                <br><br>
+
+                                Este programa tem por objetivo, definir uma metodologia de ação que garanta a preservação da saúde e 
+                                integridade dos trabalhadores face aos riscos existentes nos  ambientes de trabalho.
+
+                                <br><br>
+
+                                A legislação de segurança do trabalho brasileira considera como riscos ambientais, agentes físicos, químicos e biológicos. 
+                                Para que sejam considerados fatores de riscos ambientais estes agentes precisam estar presentes no ambiente de trabalho em
+                                determinadas concentrações ou intensidade, e o tempo máximo de exposição do trabalhador a eles é determinado por limites pré 
+                                estabelecidos.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Elaboração de Laudo Pericial</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Levantamento das Condições Ambientais de Trabalho em relação aos riscos físico, químico e biológico... 
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                Levantamento das Condições Ambientais de Trabalho em relação aos riscos físico, químico e biológico.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Treinamento</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Mais do que necessário, treinamentos são fundamentais para a saúde de todos os integrantes de 
+                        uma organização, e por consequência, da própria organização...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6 max-h-[60vh] overflow-y-auto">
+                            <p class="text-gray-600">
+                               Mais do que necessário, treinamentos são fundamentais para a saúde de todos os integrantes de uma organização, e por consequência, da própria 
+                               organização. Tão importante quanto sua realização é a comprovação de que foi realizado.
+
+                                <br><br>
+
+                                Quando tratamos do assunto, logo se imagina uma sala de aula, aonde voltamos ao tempo de escola, com um professor e provas para verificar o 
+                                aprendizado, porém, o ato de treinar pode assumir várias formas além da convencional.
+
+                                <br><br>
+
+                                Segundo a Norma Regulamentadora 1, da Portaria 3214/78, cabe ao empregador “cumprir e fazer cumprir as disposições legais e regulamentares sobre 
+                                segurança e medicina do trabalho; informar aos trabalhadores os riscos profissionais que possam originar-se nos locais de trabalho; e os meios para prevenir 
+                                e limitar tais riscos e as medidas adotadas pela empresa.”
+
+                                <br><br>
+
+                                Infelizmente muitas empresas ainda visualizam o treinamento como algo complicado, de difícil aplicação prática.
+
+                                <br><br>
+
+                                Entretanto, qualquer instrução de trabalho é considerada um treinamento e, portanto, é importantíssimo que as empresas passem a 
+                                efetuar essas instruções além de maneira habitual atentando-se para a formalidade.
+
+                                <br><br>
+
+                                Não é incomum encontrarmos empresas que realizam, de maneira espontânea, todos os treinamentos necessários às atividades desenvolvidas 
+                                pelo empregado, sem se dar conta que o fazem.
+
+                                <br><br>
+
+                                A experiência mostra que as empresas (independentemente do segmento econômico), via de regra, não admitem empregados sem que este esteja orientado 
+                                para a realização de suas funções de maneira segura, bem como, visando a produtividade, sem que haja integração aos demais profissionais da empresa, 
+                                sem que este tome conhecimento das políticas da empresa e dos riscos envolvidos no processo produtivo e sem a realização de treinamento.
+
+                                <br><br>
+
+                                Muitas empresas pecam na formalidade desse ato, ou seja, não registram as instruções repassadas informalmente aos trabalhadores recém admitidos e com a
+                                 mesma frequência não se observam registros periódicos dos treinamentos realizados.
+
+                                <br><br>
+
+                                É importante destacar também, como em qualquer atividade humana, o profissional com o passar do tempo, independentemente da atividade que exerça,
+                                pode se tornar acomodado e adquirir vícios em nome da pressão que sofre, do estresse que sente e também por não saber mais executar suas atividades em 
+                                função de adaptações e mudanças, principalmente se forem oriundas de mudanças tecnológicas no processo de trabalho.
+
+                                <br><br>
+
+                                Por isso mesmo, é preciso que os líderes/supervisores ajustem os comportamentos e atitudes que considerem divergentes às recomendáveis na suas empresas, 
+                                sempre que possível formalizando em documentos apropriados (Ordem de Serviço).
+
+                                <br><br>
+
+                                Periodicamente, verificar se os profissionais estão atuando com ética, com respeito às normas estabelecidas, de maneira coerente e com eficiência é uma 
+                                tarefa que deve ser executada pelos gestores, e/ou responsáveis.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Avaliações Ambientais</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        Consiste na avaliação de um determinado local com a aplicação de diferentes metodologias, visando gerar um diagnóstico ambiental... 
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                Consiste na avaliação de um determinado local com a aplicação de diferentes metodologias, visando gerar um diagnóstico ambiental, geralmente descrevendo os níveis de contaminação, distúrbio ou preservação de uma determinada área. 
+
+                                <br><br>
+
+                                As avaliações "in loco" são a base dos documentos produzidos (PPRA, PCMSO e Laudo Pericial). 
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div x-data="{ modalIsOpen: false }">
+                <!-- Card -->
+                <div class="max-w-sm bg-white shadow-md p-8 relative text-center  hover:shadow-lg h-full flex flex-col">
+                    <div class="flex mb-4">
+                        <div class="bg-[var(--primary)] p-4 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-building-hospital">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l18 0" />
+                                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                                <path d="M10 9l4 0" />
+                                <path d="M12 7l0 4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <h3 class="text-start text-xl font-semibold text-gray-900 mb-3">Assessoria ao Preenchimento do PPP</h3>
+
+                    <p class="text-start text-gray-600 mb-4 flex-grow">
+                        A Instrução Normativa do INSS/DC institui a obrigatoriedade de emissão do Perfil Profissiográfico Previdenciário...
+                    </p>
+
+                    <button @click="modalIsOpen = true"
+                        class="text-start text-[var(--primary)] font-medium hover:underline">
+                        Ler mais
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.300ms
+                    x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false"
+                    @click.self="modalIsOpen = false"
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                        class="w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-xl">
+
+                        <div class="flex items-center justify-between border-b p-4">
+                            <h3 id="modal-title" class="text-xl font-semibold text-gray-800">Medicina do Trabalho</h3>
+                            <button @click="modalIsOpen = false" aria-label="Fechar modal"
+                                class="text-gray-500 hover:text-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600">
+                                A Instrução Normativa do INSS/DC institui a obrigatoriedade de emissão do Perfil Profissiográfico 
+                                Previdenciário - PPP por parte das empresas, obrigando-as inclusive a guarda de informações históricas anuais, para eventuais fiscalizações.
+
+                                <br><br>
+
+                                É um documento individual do trabalhador, que a ele pertence e a ele deverá ser entregue pela empresa, 
+                                quando de seu desligamento, contendo seu Histórico Laboral (Dados pessoais, classificação funcional correta de acordo com especificado na 
+                                Carteira de Trabalho e identificado no PPRA / PCMSO, incluídas as informações de mudança de função, quando houver, os riscos e agentes nocivos 
+                                respectivos e EPI's – Equipamentos de Proteção Individual fornecidos, os exames médicos, as audiometrias e exames laboratoriais realizados e os acidentes ocorridos 
+                                com os respectivos registros das CAT's - Comunicações de Acidente de Trabalho).
+
+                                <br><br>
+
+                                A CONTRATANTE, terá a sua disposição, através dos Programas PPRA e PCMSO, bem como dos ASO's Atestados de Saúde Ocupacional, todas as informações complementares necessárias ao preenchimento do PPP.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-end gap-2 border-t bg-gray-50 p-4">
+                            <button @click="modalIsOpen = false" type="button"
+                                class="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-medium text-white transition hover:opacity-80">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
